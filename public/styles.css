@@ -2,7 +2,16 @@
 
 /* Main Colors - #FFD31D, #D63447, #F57B51, #F6EEDF*/
 
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 
+/* ======= Body set up ======= */
+
+body {
+    font-family: 'Almarai', sans-serif;
+    font-size: 16px;
+    background-color: #f6eedf;
+    text-align: center;
+}
 
 /* ======= Buttons ======= */
 
@@ -44,4 +53,22 @@
 .button-secondary:link {
     color: #f57b51;
     border: 3px #f57b51 solid;
+}
+
+
+
+
+
+/* ======================================= Header Set Up ======================================= */
+
+header {
+    background-color: #ffd31d;
+    color: black;
+}
+
+/* ======================================= Footer Set Up ======================================= */
+
+footer {
+    background-color: #ffd31d;
+    color: black;
 }
