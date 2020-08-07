@@ -1,0 +1,47 @@
+/* ======================================= Front Page Styles ======================================= */
+
+/* Main Colors - #FFD31D, #D63447, #F57B51, #F6EEDF*/
+
+
+
+/* ======= Buttons ======= */
+
+.button-main,
+.button-secondary {
+    padding-left: 50px;
+    padding-right: 50px;
+    box-shadow: 2px 2px 8px #888888;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.button-main,
+.button-main:visited {
+    background-color: #d63447;
+    color: #f6eedf;
+    border: 1px #888888 solid;
+}
+
+.button-main:hover,
+.button-main:active,
+.button-main:link {
+    background-color: #f57b51;
+    border: 1px #888888 solid;
+    color: #f6eedf;
+}
+
+.button-secondary,
+.button-secondary:visited {
+    color: #d63447;
+    border: 3px #d63447 solid;
+}
+
+.button-secondary:hover,
+.button-secondary:active,
+.button-secondary:link {
+    color: #f57b51;
+    border: 3px #f57b51 solid;
+}
