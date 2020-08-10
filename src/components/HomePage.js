@@ -3,7 +3,7 @@ import palette from '../palette';
 import Button from './Button';
 
 const headerMainTextStyle = {
-    fontFamily: 'sans-serif',
+    fontFamily: "'Nunito', 'sans-serif'",
     color: palette('black')
 };
 
@@ -26,6 +26,7 @@ export default function HomePage() {
       
       <div style={headerDivStyle}>
         <div style={box}/>
+        <img src="./images/logo.png" alt="logo"/>
         <h1 style={headerMainTextStyle}>flicks</h1>
         <h6 style={headerMainTextStyle}>what someone means when they say "add it to my list"</h6>
         <Button button={{buttonLabel: 'sign up now!'}} buttonOnClick = {() => {alert('signed up')}}/>
