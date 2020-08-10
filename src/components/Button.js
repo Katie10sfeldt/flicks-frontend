@@ -15,7 +15,7 @@ export default function Button({button: {buttonLabel, buttonColor='secondary', t
 
   };
     return (
-    <button style={style} onClick={buttonOnClick}>{buttonLabel}</button>
+    <button class="btn" style={style} onClick={buttonOnClick}>{buttonLabel}</button>
   );
 }
 
