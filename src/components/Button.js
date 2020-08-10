@@ -10,12 +10,13 @@ export default function Button({button: {buttonLabel, buttonColor='secondary', t
       borderRadius: '50px',
       padding: '10px 40px',
       margin: '10px 20px',
-      boxShadow: `2px 2px 10px ${palette('black')}`
+      boxShadow: `2px 2px 10px ${palette('black')}`,
+      outline: 'none'
 
 
   };
     return (
-    <button class="btn" style={style} onClick={buttonOnClick}>{buttonLabel}</button>
+    <button style={style} onClick={buttonOnClick}>{buttonLabel}</button>
   );
 }
 
