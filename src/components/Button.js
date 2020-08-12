@@ -8,10 +8,11 @@ export default function Button({button: {buttonLabel, buttonColor='secondary', t
       backgroundColor: palette(buttonColor),
       border: border ? `2px solid ${palette(textColor)}`: 'none',
       borderRadius: '50px',
-      padding: '10px 40px',
-      margin: '10px 20px',
+      width: '200px',
+      height: '45px',
       boxShadow: `2px 2px 10px ${palette('black')}`,
-      outline: 'none'
+      outline: 'none',
+      margin: '20px'
 
 
   };
@@ -29,6 +30,3 @@ Button.propTypes = {
     },
     buttonOnClick: PropTypes.func.isRequired
 };
-
-
-// #FFD31D, #D63447, #F57B51, #F6EEDF 
