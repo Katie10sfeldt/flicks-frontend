@@ -68,7 +68,7 @@ const iconSection = {
 };
 
 const icon = {
-  color: palette('orange'),
+  color: palette('secondary'),
   fontSize: '250%',
   marginBottom: '15px'
 };
@@ -126,12 +126,12 @@ const reviewSection = {
 };
 
 const quote = {
-  color: palette('orange'),
+  color: palette('grey'),
   padding: '1% 10%'
 };
 
 const customer = {
-  color: palette('grey'),
+  color: palette('secondary'),
   textAlign: 'right'
 };
 
