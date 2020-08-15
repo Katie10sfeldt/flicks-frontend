@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import palette from '../palette';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faSnapchatSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 
 
 export default function Footer({footer: {footerColor='primary', textColor="black"}, footerOnMouseover}) {
@@ -63,9 +65,9 @@ export default function Footer({footer: {footerColor='primary', textColor="black
             </div>
 
             <div style={socialLinks}>
-                <a style={social} href="instagram.com"><i class="fab fa-instagram-square"/></a>
-                <a style={social} href="snapchat.com"><i class="fab fa-snapchat-square"/></a>
-                <a style={social} href="twitter.com"><i class="fab fa-twitter-square"/></a>
+                <a style={social} href="instagram.com"><FontAwesomeIcon icon={faInstagram} size="lg"/></a>
+                <a style={social} href="snapchat.com"><FontAwesomeIcon icon={faSnapchatSquare} size="lg"/></a>
+                <a style={social} href="twitter.com"><FontAwesomeIcon icon={faTwitterSquare} size="lg"/></a>
             </div>
 
         </div>
