@@ -14,8 +14,7 @@ export default function Footer({footer: {footerColor='primary', textColor="black
         color: palette('black'),
         display: 'flex',
         justifyContent: 'space-around',
-        padding: '2% 5%',
-        borderTop: `dashed ${palette('black')} 2px`
+        padding: '2% 5%'
     };
 
     const logo = {
