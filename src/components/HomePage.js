@@ -1,6 +1,7 @@
 import React from 'react';
 import palette from '../palette';
 import Button from './Button';
+import Footer from './Footer';
 
 const body ={
   fontFamily:"'Nunito', 'sans-serif'",
@@ -142,7 +143,8 @@ const quoteBlock = {
 const signUpSection = {
   backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(./images/sock.jpg)',
   backgroundPosition: 'center',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  padding: '1% 10% 4%',
 };
 
 const signUpHeader = {
@@ -307,7 +309,7 @@ export default function HomePage() {
           buttonOnClick = {() => {alert('signed up')}}/>
         
       </div>
-
+      <Footer footer={{footerColor: palette('primary')}}/>
 
       </div>
       
