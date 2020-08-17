@@ -1,7 +1,7 @@
 import React from 'react';
 import palette from '../palette';
 import Button from './Button';
-// import Footer from './Footer';  //This is left commented out until ready to use
+import Footer from './Footer';
 
 const body ={
   fontFamily:"'Nunito', 'sans-serif'",
@@ -308,7 +308,7 @@ export default function HomePage() {
           buttonOnClick = {() => {alert('signed up')}}/>
         
       </div>
-      {/* <Footer footer={{footerColor: palette('primary')}}/> This is left commented out until ready to use */}
+      <Footer footer={{footerColor: palette('primary')}}/>
 
       </div>
       

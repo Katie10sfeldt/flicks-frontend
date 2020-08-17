@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import palette from '../palette';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faSnapchatSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faSnapchatSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Footer({footer: {footerColor='primary', textColor="black"}, footerOnMouseover}) {
