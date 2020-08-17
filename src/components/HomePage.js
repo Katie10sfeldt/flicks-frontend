@@ -143,7 +143,8 @@ const quoteBlock = {
 const signUpSection = {
   backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(./images/sock.jpg)',
   backgroundPosition: 'center',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  padding: '1% 10% 4%',
 };
 
 const signUpHeader = {
