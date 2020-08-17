@@ -65,7 +65,7 @@ export default function Footer({footer: {footerColor='primary', textColor="black
             </div>
 
             <div style={socialLinks}>
-                <a style={social} href="instagram.com"><FontAwesomeIcon icon={faFacebookSquare} size="lg"/></a>
+                <a style={social} href="facebook.com"><FontAwesomeIcon icon={faFacebookSquare} size="lg"/></a>
                 <a style={social} href="snapchat.com"><FontAwesomeIcon icon={faSnapchatSquare} size="lg"/></a>
                 <a style={social} href="twitter.com"><FontAwesomeIcon icon={faTwitterSquare} size="lg"/></a>
             </div>
