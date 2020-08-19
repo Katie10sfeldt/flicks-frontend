@@ -9,12 +9,12 @@ const body ={
 };
 
 const mainTitle = {
-  color: palette('black'),
+  color: palette('purple'),
   fontSize: '350%'
 };
 
 const headerText = {
-  color: palette('black'),
+  color: palette('purple'),
 };
 
 const logoHead = {
