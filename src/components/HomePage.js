@@ -165,7 +165,7 @@ export default function HomePage() {
           <img style={logoHead} src="./images/logo.png" alt="logo"/>
         </div>
         <div style={titleButtons}>
-          <h1 style={mainTitle}>flicks</h1>
+          <h1 style={mainTitle}>flicks app test</h1>
           <h5 style={headerText}>what someone means when they say "add it to my list"</h5>
           <Button button={{buttonLabel: 'sign up now!'}} buttonOnClick = {() => {alert('signed up')}}/>
           <Button button={{
