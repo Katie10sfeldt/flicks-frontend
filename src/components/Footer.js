@@ -8,6 +8,8 @@ import { faFacebookSquare, faSnapchatSquare, faTwitterSquare } from '@fortawesom
 
 export default function Footer({footer: {footerColor='primary', textColor="black"}, footerOnMouseover}) {
 
+    const year = new Date().getFullYear()
+
     const footerBody = {
         fontFamily: "'Nunito', 'sans-serif'",
         backgroundColor: palette('primary'),
@@ -61,7 +63,7 @@ export default function Footer({footer: {footerColor='primary', textColor="black
 
             <div style={logoSection}>
                 <img style={logo} src="./images/logo.png" alt="Main logo"/>
-                <p>copyright flicks&copy; 2020</p>
+                <p>copyright flicks&copy; {year}</p>
             </div>
 
             <div style={socialLinks}>
