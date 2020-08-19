@@ -38,7 +38,7 @@ const flexHead = {
 };
 
 const headerDivStyle = {
-  backgroundColor: palette('yellow'),
+  backgroundColor: palette('secondary'),
   padding: '10px 0'
 };
 
