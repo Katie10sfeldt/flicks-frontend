@@ -3,6 +3,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 
 import Button from './Button';
+import palette from '../palette';
 
 export default {
   component: Button,
@@ -19,6 +20,6 @@ export const buttonData = {
   buttonLabel:'button text'
 };
 
-export const Default = () => <Button button={{...buttonData}} {...actionsData}/> 
+export const Default = () => <Button button={{...buttonData, buttonLabel:'sign up'}} {...actionsData}/> 
 
-export const BlueText = () => <Button button={{...buttonData,  buttonColor:'blue'}}{...actionsData}/>
+export const ClearButton = () => <Button button={{...buttonData,  buttonColor:palette('primary')}}{...actionsData}/>

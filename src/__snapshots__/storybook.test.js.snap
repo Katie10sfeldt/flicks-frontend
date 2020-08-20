@@ -44,7 +44,6 @@ exports[`Storyshots Button Default 1`] = `
 
 exports[`Storyshots Footer Default 1`] = `
 <div
-  onMouseOver={[Function]}
   style={
     Object {
       "backgroundColor": "#ffd31d",
