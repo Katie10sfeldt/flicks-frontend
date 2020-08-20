@@ -186,18 +186,18 @@ export default function HomePage() {
         <h2 style={sectionHeader}>Watch lists, finally organized</h2>
         <hr style={line}/>
 
-        <div class="container" style={iconSection}>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12" style={iconBox}>
-              <i style={icon} class="fas fa-list"/>
+        <div className="container" style={iconSection}>
+          <div className="row">
+            <div className="col-lg-4 col-md-6 col-sm-12" style={iconBox}>
+              <i style={icon} className="fas fa-list"/>
               <p style={iconCaption}>Maintain your list of shows that are currently available on various streaming services</p>
             </div>
-            <div class="col-lg-4 col-md-6 sol-sm-12" style={iconBox}>
-              <i style={icon} class="fas fa-share-square"/>
+            <div className="col-lg-4 col-md-6 sol-sm-12" style={iconBox}>
+              <i style={icon} className="fas fa-share-square"/>
               <p style={iconCaption}>"flick" and "be flicked" - Share viewing recommendations with your friends</p>
             </div>
-            <div class="col-lg-4 col-md-6 sol-sm-12" style={iconBox}>
-              <i style={icon} class="fas fa-film"/>
+            <div className="col-lg-4 col-md-6 sol-sm-12" style={iconBox}>
+              <i style={icon} className="fas fa-film"/>
               <p style={iconCaption}>Feel accomplished knowing you're finally keeping track of those movies and shows you've been meaning to watch</p>
             </div>
           </div>
@@ -275,23 +275,23 @@ export default function HomePage() {
           <hr style={line}/>
           <h2 style={sectionHeader}>Users love flicks!</h2>
           <hr style={line}/>
-        <div class="row">
-          <div class="col-lg-12 col-md-6 col-sm-12" style={quoteBlock}>
+        <div className="row">
+          <div className="col-lg-12 col-md-6 col-sm-12" style={quoteBlock}>
             <blockquote style={quote}>"It's so nice being able to share my interests with my friends. I can honestly say 'I will definitely watch that!' now"</blockquote>
             <cite style={customer}>- Andrew J</cite>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12" style={quoteBlock}>
+          <div className="col-lg-6 col-md-6 col-sm-12" style={quoteBlock}>
             <blockquote style={quote}>"I don't have to try to mentally keep track of my list of shows- or who recommended them!"</blockquote>
             <cite style={customer}>- Debbie S</cite>
           </div>
-          <div class="col-lg-6 col-md-12 col-sm-12" style={quoteBlock}> 
+          <div className="col-lg-6 col-md-12 col-sm-12" style={quoteBlock}> 
             <blockquote style={quote}>"My friends can actually see what shows I have access to, so now they don't recommend things I can't watch. It makes my list so much more manageable!"</blockquote>
             <cite style={customer}>- Kelly M</cite>
           </div>
         </div>
       </div>
 
-      <div class="sign-up" style={signUpSection}>
+      <div className="sign-up" style={signUpSection}>
 
         <div style={signUpHeader}>
           <hr style={line}/>
