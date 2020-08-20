@@ -28,5 +28,5 @@ Button.propTypes = {
         textColor: PropTypes.string,
         border: PropTypes.bool
     },
-    buttonOnClick: PropTypes.func.isRequired
+    buttonOnClick: PropTypes.func
 };

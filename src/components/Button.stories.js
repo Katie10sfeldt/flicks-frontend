@@ -8,7 +8,6 @@ import palette from '../palette';
 export default {
   component: Button,
   title: 'Button',
-  // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 };
 
@@ -20,6 +19,6 @@ export const buttonData = {
   buttonLabel:'button text'
 };
 
-export const Default = () => <Button button={{...buttonData, buttonLabel:'sign up'}} {...actionsData}/> 
+export const Default = () => <Button button={{...buttonData}}{...actionsData}/> 
 
 export const ClearButton = () => <Button button={{...buttonData,  buttonColor:palette('primary')}}{...actionsData}/>
