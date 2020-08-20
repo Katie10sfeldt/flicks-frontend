@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import palette from '../palette';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faSnapchatSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
-export default function Footer({footer: {footerColor='primary', textColor="black"}, footerOnMouseover}) {
+function Footer() {
 
     const year = new Date().getFullYear()
 
@@ -54,7 +53,7 @@ export default function Footer({footer: {footerColor='primary', textColor="black
     };
 
     return (
-        <div style={footerBody} onMouseOver={footerOnMouseover}>
+        <div style={footerBody}>
             <div style={links}>
                 <a style={nav} href="google.com">sign up</a>
                 <a style={nav} href="google.com">contact</a>
@@ -78,11 +77,4 @@ export default function Footer({footer: {footerColor='primary', textColor="black
 
 };
 
-
-Footer.propTypes = {
-    footer: {
-        footerColor: PropTypes.string.isRequired,
-        textColor: PropTypes.string
-    },
-    footerOnMouseover: PropTypes.func
-};
+export default Footer;
