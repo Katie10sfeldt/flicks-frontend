@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import palette from '../palette';
 
 export default function Button({button: {buttonLabel, buttonColor='secondary', textColor='white', border=false}, buttonOnClick}) {
@@ -21,12 +21,13 @@ export default function Button({button: {buttonLabel, buttonColor='secondary', t
   );
 }
 
-Button.propTypes = {
-    button: {
-        buttonLabel: PropTypes.string.isRequired,
-        buttonColor: PropTypes.string,
-        textColor: PropTypes.string,
-        border: PropTypes.bool
-    },
-    buttonOnClick: PropTypes.func.isRequired
-};
+// FIXME: Forget about propTypes for now. I'm not sure why this is erroring
+//Button.propTypes = {
+//    button: {
+//        buttonLabel: PropTypes.string.isRequired,
+//        buttonColor: PropTypes.string,
+//        textColor: PropTypes.string,
+//        border: PropTypes.bool
+//    },
+//    buttonOnClick: PropTypes.func.isRequired
+//};

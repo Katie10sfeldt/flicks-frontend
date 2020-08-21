@@ -309,7 +309,7 @@ export default function HomePage() {
           buttonOnClick = {() => {alert('signed up')}}/>
         
       </div>
-      <Footer footer={{footerColor: palette('primary')}}/>
+      <Footer />
 
       </div>
       
