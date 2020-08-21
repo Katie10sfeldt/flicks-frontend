@@ -1,7 +1,4 @@
-
 import React from 'react';
-import { action } from '@storybook/addon-actions';
-
 import Button from './Button';
 import palette from '../palette';
 
@@ -10,15 +7,10 @@ export default {
   title: 'Button',
   excludeStories: /.*Data$/,
 };
+const Template = (args) => <Button button={{...args}} {...{buttonOnClick: () => alert('clicked')}}/>;
 
-export const actionsData = {
-  buttonOnClick: action('buttonOnClick')
-};
+export const Default = Template.bind({});
+Default.args = {buttonLabel: 'button label'};
 
-export const buttonData = {
-  buttonLabel:'button text'
-};
-
-export const Default = () => <Button {...{...buttonData}}{...actionsData}/> 
-
-export const ClearButton = () => <Button {...{...buttonData,  buttonColor:palette('primary')}}{...actionsData}/>
+export const ClearButton = Template.bind({});
+ClearButton.args = {buttonLabel: 'button label',  buttonColor: palette('primary'), textColor: 'black'};
