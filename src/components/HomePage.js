@@ -2,6 +2,7 @@ import React from 'react';
 import palette from '../palette';
 import Button from './Button';
 import Footer from './Footer';
+import SignUp from './SignUp';
 
 const body ={
   fontFamily:"'Nunito', 'sans-serif'",
@@ -167,7 +168,7 @@ export default function HomePage() {
         <div style={titleButtons}>
           <h1 style={mainTitle}>flicks</h1>
           <h5 style={headerText}>what someone means when they say "add it to my list"</h5>
-          <Button button={{buttonLabel: 'sign up now!'}} buttonOnClick = {() => {alert('signed up')}}/>
+          <SignUp />
           <Button button={{
             buttonLabel: 'learn more', 
             buttonColor: palette('primary'), 
