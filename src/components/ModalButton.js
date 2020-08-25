@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-function SignUp() {
+function ModalButton() {
     const [open, setOpen] = useState(false);
     const style = useStyles();
 
@@ -49,4 +49,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default ModalButton;
