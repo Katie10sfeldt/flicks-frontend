@@ -7,7 +7,10 @@ export default function palette(inputColor)  {
         'yellow': '#ffd31d',
         'red': '#d63447',
         'orange': '#f57b51',
-        'white': '#f6eedf'    
+        'white': '#f6eedf',
+        'google': '#dd4b39',
+        'twitter': '#1DA1F2',
+        'facebook': '#1877F2'    
     }
     const lowerColor = inputColor.toLowerCase();
 
