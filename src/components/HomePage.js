@@ -2,6 +2,31 @@ import React from 'react';
 import palette from '../palette';
 import Button from './Button';
 import Footer from './Footer';
+import ModalButton from './ModalButton';
+import SignUpButton from './SignUpButton';
+import { makeStyles } from '@material-ui/core/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    backgroundColor: palette('white'),
+    border: 'none',
+    borderRadius: '10px',
+    outline: '0',
+    boxShadow: `5px 5px 30px  ${palette('black')}`,
+    padding: '2%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    color: palette('orange')
+  }
+}));
+
+
+
 
 const body ={
   fontFamily:"'Nunito', 'sans-serif'",
@@ -153,6 +178,7 @@ const signUpHeader = {
 };
 
 export default function HomePage() {
+  const style = useStyles();
   
     return (
       
@@ -167,7 +193,32 @@ export default function HomePage() {
         <div style={titleButtons}>
           <h1 style={mainTitle}>flicks</h1>
           <h5 style={headerText}>what someone means when they say "add it to my list"</h5>
-          <Button button={{buttonLabel: 'sign up now!'}} buttonOnClick = {() => {alert('signed up')}}/>
+          <ModalButton>
+            <div className={style.paper} >
+              <h1>sign in with:</h1>
+              <SignUpButton 
+                  button={{
+                      buttonText:'Google', 
+                      buttonColor: palette('google'),
+                      buttonIcon: <FontAwesomeIcon icon={faGoogle} size="lg" />
+                  }}
+              />
+              <SignUpButton 
+                  button={{
+                      buttonText:'Twitter', 
+                      buttonColor: palette('twitter'),
+                      buttonIcon: <FontAwesomeIcon icon={faTwitter} size="lg" />
+                  }}
+              />
+              <SignUpButton 
+                  button={{
+                      buttonText:'Facebook', 
+                      buttonColor: palette('facebook'),
+                      buttonIcon: <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                  }}
+              />
+            </div>
+        </ModalButton>
           <Button button={{
             buttonLabel: 'learn more', 
             buttonColor: palette('primary'), 
@@ -299,7 +350,32 @@ export default function HomePage() {
           <hr style={line}/>
         </div>
 
-        <Button button={{buttonLabel: 'sign up now!'}} buttonOnClick = {() => {alert('signed up')}}/><br/>
+        <ModalButton>
+          <div className={style.paper} >
+              <h1>sign in with:</h1>
+              <SignUpButton 
+                  button={{
+                      buttonText:'Google', 
+                      buttonColor: palette('google'),
+                      buttonIcon: <FontAwesomeIcon icon={faGoogle} size="lg" />
+                  }}
+              />
+              <SignUpButton 
+                  button={{
+                      buttonText:'Twitter', 
+                      buttonColor: palette('twitter'),
+                      buttonIcon: <FontAwesomeIcon icon={faTwitter} size="lg" />
+                  }}
+              />
+              <SignUpButton 
+                  button={{
+                      buttonText:'Facebook', 
+                      buttonColor: palette('facebook'),
+                      buttonIcon: <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                  }}
+              />
+          </div>
+        </ModalButton>
         <Button button={{
           buttonLabel: 'sign in', 
           buttonColor: palette('white'), 
