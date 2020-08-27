@@ -8,4 +8,4 @@ export default {
 };
 
 
-export const Default = () => <ModalButton />
+export const Default = () => <ModalButton><h1>Hello</h1></ModalButton>

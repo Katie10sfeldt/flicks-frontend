@@ -28,4 +28,3 @@ export default function SignUpButton({button: {buttonIcon, buttonText, buttonCol
     )
 }
 
-
