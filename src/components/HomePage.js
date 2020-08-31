@@ -7,6 +7,7 @@ import SignUpButton from './SignUpButton';
 import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -196,27 +197,33 @@ export default function HomePage() {
           <ModalButton>
             <div className={style.paper} >
               <h1>sign in with:</h1>
-              <SignUpButton 
-                  button={{
-                      buttonText:'Google', 
-                      buttonColor: palette('google'),
-                      buttonIcon: <FontAwesomeIcon icon={faGoogle} size="lg" />
-                  }}
-              />
-              <SignUpButton 
-                  button={{
-                      buttonText:'Twitter', 
-                      buttonColor: palette('twitter'),
-                      buttonIcon: <FontAwesomeIcon icon={faTwitter} size="lg" />
-                  }}
-              />
-              <SignUpButton 
-                  button={{
-                      buttonText:'Facebook', 
-                      buttonColor: palette('facebook'),
-                      buttonIcon: <FontAwesomeIcon icon={faFacebookF} size="lg" />
-                  }}
-              />
+                <Link to='/page1'>
+                  <SignUpButton 
+                      button={{
+                          buttonText:'Google', 
+                          buttonColor: palette('google'),
+                          buttonIcon: <FontAwesomeIcon icon={faGoogle} size="lg" />
+                      }}
+                  />
+                </Link>
+                <Link to='/page1'>
+                  <SignUpButton 
+                      button={{
+                          buttonText:'Twitter', 
+                          buttonColor: palette('twitter'),
+                          buttonIcon: <FontAwesomeIcon icon={faTwitter} size="lg" />
+                      }}
+                  />
+                </Link>
+                <Link to='/page1'>
+                  <SignUpButton 
+                      button={{
+                          buttonText:'Facebook', 
+                          buttonColor: palette('facebook'),
+                          buttonIcon: <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                      }}
+                  />
+                </Link>
             </div>
         </ModalButton>
           <Button button={{
@@ -225,7 +232,7 @@ export default function HomePage() {
             textColor: palette('secondary'),
             border: true
           }} 
-          buttonOnClick = {() => {alert('signed up')}}/>
+          buttonOnClick = {() => {alert('You learned more!')}}/>
         </div>
         </div>
 
@@ -353,27 +360,33 @@ export default function HomePage() {
         <ModalButton>
           <div className={style.paper} >
               <h1>sign in with:</h1>
-              <SignUpButton 
-                  button={{
-                      buttonText:'Google', 
-                      buttonColor: palette('google'),
-                      buttonIcon: <FontAwesomeIcon icon={faGoogle} size="lg" />
-                  }}
-              />
-              <SignUpButton 
-                  button={{
-                      buttonText:'Twitter', 
-                      buttonColor: palette('twitter'),
-                      buttonIcon: <FontAwesomeIcon icon={faTwitter} size="lg" />
-                  }}
-              />
-              <SignUpButton 
-                  button={{
-                      buttonText:'Facebook', 
-                      buttonColor: palette('facebook'),
-                      buttonIcon: <FontAwesomeIcon icon={faFacebookF} size="lg" />
-                  }}
-              />
+              <Link to='/page1'>
+                  <SignUpButton 
+                      button={{
+                          buttonText:'Google', 
+                          buttonColor: palette('google'),
+                          buttonIcon: <FontAwesomeIcon icon={faGoogle} size="lg" />
+                      }}
+                  />
+                </Link>
+                <Link to='/page1'>
+                  <SignUpButton 
+                      button={{
+                          buttonText:'Twitter', 
+                          buttonColor: palette('twitter'),
+                          buttonIcon: <FontAwesomeIcon icon={faTwitter} size="lg" />
+                      }}
+                  />
+                </Link>
+                <Link to='/page1'>
+                  <SignUpButton 
+                      button={{
+                          buttonText:'Facebook', 
+                          buttonColor: palette('facebook'),
+                          buttonIcon: <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                      }}
+                  />
+                </Link>
           </div>
         </ModalButton>
         <Button button={{
@@ -382,7 +395,7 @@ export default function HomePage() {
           textColor: palette('secondary'),
           border: true
         }} 
-          buttonOnClick = {() => {alert('signed up')}}/>
+          buttonOnClick = { () => (<Link to='/page1' />)}/>
         
       </div>
       <Footer />
