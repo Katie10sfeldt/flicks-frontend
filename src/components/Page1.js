@@ -7,11 +7,11 @@ export default function Page1() {
         <div>
             <h1>Page 1</h1>
             <Link to='/'>
-            <Button button={{
-                buttonLabel: 'home'
-                }} 
-                buttonOnClick = { () => {}} 
-            />
+                <Button button={{
+                    buttonLabel: 'home'
+                    }} 
+                    buttonOnClick = { () => {}} 
+                />
             </Link>
         </div>
     );
