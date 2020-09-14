@@ -66,3 +66,21 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+---
+
+# User Stories
+
+---
+
+1. As a user I want to sign up for flicks using my Gmail account so that I don't have to manage another set of login credentials.
+2. As a user I want to be able to easily view my watch list and recommendation list in one spot so I don't have to navigate around too much.
+3. As a user, I want to clearly see who recommended a show or movie to me so I can send a "thanks" when I watch it.
+4. As I user, I want to be able to organize my watch lists into categories based off genre, or based off of streaming service so I can find exactly what I'm looking for.
+5. As a user, I want to be able to send a recommendation to my friends from any screen of the app (search screen, my lists, another user's list).
+6. As a user, I want to know what streaming service any particular show or movie is on, in any view of the app so I don't have to continuously click around to find the information I want.
+7. As a user, I want the capability to click on a movie or show in my list, and be redirected directly to the streaming service where the show or movie pops up and begins to play (alternately, opens a window and connects with my streaming service).
+8. As a user, I want simple, and straight forward website navigation so I don't get "lost" on any particular page
+9. As a user, I want the show portion to work almost exactly the same as the movie portion, with the exception of being able to check off individual episodes as watched.
+10. As a user, I want to be able to find my friends easily with their Google, Facebook, or Twitter accounts so I can send them recommendations.
+11. As a user, I want to stay logged in with my Google, Twitter or Facebook accounts so I don't have to continuously sign in.
