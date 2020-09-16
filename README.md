@@ -74,13 +74,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ---
 
 1. As a user I want to sign up for flicks using my Gmail account so that I don't have to manage another set of login credentials.
-2. As a user I want to be able to easily view my watch list and recommendation list in one spot so I don't have to navigate around too much.
-3. As a user, I want to clearly see who recommended a show or movie to me so I can send a "thanks" when I watch it.
-4. As I user, I want to be able to organize my watch lists into categories based off genre, or based off of streaming service so I can find exactly what I'm looking for.
-5. As a user, I want to be able to send a recommendation to my friends from any screen of the app (search screen, my lists, another user's list).
-6. As a user, I want to know what streaming service any particular show or movie is on, in any view of the app so I don't have to continuously click around to find the information I want.
-7. As a user, I want the capability to click on a movie or show in my list, and be redirected directly to the streaming service where the show or movie pops up and begins to play (alternately, opens a window and connects with my streaming service).
-8. As a user, I want simple, and straight forward website navigation so I don't get "lost" on any particular page
-9. As a user, I want the show portion to work almost exactly the same as the movie portion, with the exception of being able to check off individual episodes as watched.
-10. As a user, I want to be able to find my friends easily with their Google, Facebook, or Twitter accounts so I can send them recommendations.
-11. As a user, I want to stay logged in with my Google, Twitter or Facebook accounts so I don't have to continuously sign in.
+2. As an authorized user I want a main page where I can view both my watch list and recommendation list side-by-side so it limits the amount of navigation that has to be done.
+3. As an authorized user, I want a button right next to each movie or show that automatically sends a 'thank you' to the other user who recommended it so I don't have to navigate to their page, or write a personalized note.
+4. As I user, I want my watch list and my recommendation list to have a sorting option based off genre, streaming service, and who recommended the show or movie so I can find the exact show or movie I may be in the mood for.
+5. As an authorized user, I want a button above each movie or show that allows me to send a recommendation to my friends from any screen of the app where a movie or film is listed (search screen, my lists, another user's list), so I don't run the risk of forgetting about it, or needing to search for it again elsewhere.
+6. As a user, I want any page that contains a movie or show listed as a movie poster to have a mouseover option that contains pertinent information, such as the specific streaming service it is available on, as well as the title, and year of release so I don't later have to search for those titles on a different page.
+7. As a user, I want a page that will display more details about a title when I click on that particular title, such as a brief description and a rating (from RottenTomatoes or IMDB) so I can remain on the flicks site when needing to gain more information on a title.
+8. As a user, I want a consistent navigation bar on every page that will direct me to my lists and hosts a search bar for titles so I don't have to re-learn a new page every time I click to a new location.
+9. As a user, I want a notification, similar to a red facebook notification, that will let me know when I have received a new recommendation from someone so I don't lose track.
+10. As a user, I want a feature on my main page that will allow me to either accept or reject new recommendations from being added to my list, so I can manage my list to match what I want.
+11. As a user, I want the capability to add separate lists based off of my own desires (wanting to add a "Halloween List" or a "Date Night" list) so I can customize the page to my needs.
