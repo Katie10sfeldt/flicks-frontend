@@ -1,7 +1,7 @@
 import React from 'react';
 
-class GoogleAuth extends React.Component {
-
+export default function GoogleAuth() {
+	return(
+		<div>Hello!</div>
+	)
 }
-
-export default GoogleAuth;
