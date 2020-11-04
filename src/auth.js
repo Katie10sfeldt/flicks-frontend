@@ -1,4 +1,4 @@
-const accessTokenKey = 'accessToken';
+import accessTokenKey from 'accessToken';
 
 export function getAccessToken() {
 	return localStorage.getItem(accessTokenKey);

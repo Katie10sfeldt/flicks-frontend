@@ -1,7 +1,6 @@
 import React from 'react';
 import HomePage from './components/HomePage';
 import Page1 from './components/Page1';
-import { isLoggedIn } from './auth';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 export default function Routes() {
