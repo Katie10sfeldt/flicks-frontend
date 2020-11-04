@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.3.0
+      uses: Borales/actions-yarn@v2.2.0
     - run: yarn install
     - run: yarn test
     - run: yarn build
