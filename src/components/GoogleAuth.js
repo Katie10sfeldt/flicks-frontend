@@ -7,7 +7,7 @@ class GoogleAuth extends React.Component {
 			window.gapi.client
 				.init({
 					clientId:
-						'468373991800-2khoui49ap80neonna4c8ku0178ecn2q.apps.googleusercontent.com',
+						'468373991800-8m7kjs4or7icm4ubobkc9i2bommmerdt.apps.googleusercontent.com',
 					scope: 'email',
 				})
 				.then(() => {
@@ -43,11 +43,12 @@ class GoogleAuth extends React.Component {
 	}
 
 	render() {
-		return( 
-		<div>
-			{this.renderAuthButton()}
-			<button></button>
-		</div>) ;
+		return (
+			<div>
+				{this.renderAuthButton()}
+				<button></button>
+			</div>
+		);
 	}
 }
 
