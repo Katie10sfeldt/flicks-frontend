@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import GoogleAuth from './GoogleAuth';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -194,6 +195,7 @@ export default function HomePage() {
         <div style={titleButtons}>
           <h1 style={mainTitle}>flicks</h1>
           <h5 style={headerText}>what someone means when they say "add it to my list"</h5>
+		  <GoogleAuth />
           <ModalButton>
             <div className={style.paper} >
               <h1>sign in with:</h1>
