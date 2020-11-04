@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function GoogleAuth() {
 	return(
-		<div>Hello!</div>
+		<div>Hello there!</div>
 	)
 }
