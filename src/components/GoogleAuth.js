@@ -14,10 +14,10 @@ class GoogleAuth extends React.Component {
 						'468373991800-8m7kjs4or7icm4ubobkc9i2bommmerdt.apps.googleusercontent.com',
 					scope:
 						'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
+					
 				})
 				.then(() => {
 					this.auth = window.gapi.auth2.getAuthInstance();
-					// window.gapi.auth2.get.BasicProfile();
 					this.onAuthChange();
 					this.auth.isSignedIn.listen(this.onAuthChange);
 				});
@@ -29,16 +29,17 @@ class GoogleAuth extends React.Component {
 	};
 
 	onSignIn = () => {
-		const info = this.auth.signIn();
-		console.log(info);
+		this.auth.signIn();
 	};
 
 	onSignOut = () => {
 		this.auth.signOut();
 	};
 
-	renderAuthButton() {
-		if (this.state.isSignedIn === null) {
+	authStatus() {
+		const isGoogleSignedIn = this.state.isSignedIn;
+
+		if (isGoogleSignedIn === null) {
 			return (
 				<SignUpButton
 					button={{
@@ -47,7 +48,7 @@ class GoogleAuth extends React.Component {
 					}}
 				/>
 			);
-		} else if (this.state.isSignedIn) {
+		} else if (isGoogleSignedIn) {
 			const profile = this.auth.currentUser.get().getBasicProfile();
 			alert('ID: ' + profile.getId());
 			alert('Full Name: ' + profile.getName());
@@ -81,7 +82,7 @@ class GoogleAuth extends React.Component {
 	}
 
 	render() {
-		return <div>{this.renderAuthButton()}</div>;
+		return <div>{this.authStatus()}</div>;
 	}
 }
 

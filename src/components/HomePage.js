@@ -182,6 +182,10 @@ const signUpHeader = {
 	paddingTop: '1%',
 };
 
+const pad = {
+	marginTop: '20px',
+};
+
 export default function HomePage() {
 	const style = useStyles();
 
@@ -205,22 +209,27 @@ export default function HomePage() {
 
 								<GoogleAuth />
 
-								<Link to='/page1'>
+								<h3 style={pad}>coming soon:</h3>
+								<p>click to learn more</p>
+
+								<Link to='/About'>
 									<SignUpButton
+										disabled
 										button={{
 											buttonText: 'Twitter',
-											buttonColor: palette('twitter'),
+											buttonColor: palette('twitterfaded'),
 											buttonIcon: (
 												<FontAwesomeIcon icon={faTwitter} size='lg' />
 											),
 										}}
 									/>
 								</Link>
-								<Link to='/page1'>
+								<Link to='/About'>
 									<SignUpButton
+										disabled
 										button={{
 											buttonText: 'Facebook',
-											buttonColor: palette('facebook'),
+											buttonColor: palette('facebookfaded'),
 											buttonIcon: (
 												<FontAwesomeIcon icon={faFacebookF} size='lg' />
 											),
