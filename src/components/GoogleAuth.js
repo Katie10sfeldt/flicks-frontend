@@ -4,8 +4,10 @@ import palette from '../palette';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
+import { connect } from 'react-redux';
+import { signIn, signOut } from '../actions';
+
 class GoogleAuth extends React.Component {
-	state = { isSignedIn: null };
 	componentDidMount() {
 		window.gapi.load('client:auth2', () => {
 			window.gapi.client
@@ -14,32 +16,33 @@ class GoogleAuth extends React.Component {
 						'468373991800-8m7kjs4or7icm4ubobkc9i2bommmerdt.apps.googleusercontent.com',
 					scope:
 						'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile',
-					
 				})
 				.then(() => {
 					this.auth = window.gapi.auth2.getAuthInstance();
-					this.onAuthChange();
+					this.onAuthChange(this.auth.isSignedIn.get());
 					this.auth.isSignedIn.listen(this.onAuthChange);
 				});
 		});
 	}
 
-	onAuthChange = () => {
-		this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+	onAuthChange = (isSignedIn) => {
+		if (isSignedIn) {
+			this.props.signIn();
+		} else {
+			this.props.signOut();
+		}
 	};
 
-	onSignIn = () => {
+	onSignInClick = () => {
 		this.auth.signIn();
 	};
 
-	onSignOut = () => {
+	onSignOutClick = () => {
 		this.auth.signOut();
 	};
 
 	authStatus() {
-		const isGoogleSignedIn = this.state.isSignedIn;
-
-		if (isGoogleSignedIn === null) {
+		if (this.props.isSignedIn === null) {
 			return (
 				<SignUpButton
 					button={{
@@ -48,23 +51,23 @@ class GoogleAuth extends React.Component {
 					}}
 				/>
 			);
-		} else if (isGoogleSignedIn) {
+		} else if (this.props.isSignedIn) {
 			const profile = this.auth.currentUser.get().getBasicProfile();
-			alert('ID: ' + profile.getId());
-			alert('Full Name: ' + profile.getName());
-			alert('Given Name: ' + profile.getGivenName());
-			alert('Family Name: ' + profile.getFamilyName());
-			alert('Email: ' + profile.getEmail());
-			alert('ImageURL: ' + profile.getImageUrl());
+			console.log('ID: ' + profile.getId());
+			console.log('Full Name: ' + profile.getName());
+			console.log('Given Name: ' + profile.getGivenName());
+			console.log('Family Name: ' + profile.getFamilyName());
+			console.log('Email: ' + profile.getEmail());
+			console.log('ImageURL: ' + profile.getImageUrl());
 
 			return (
 				<SignUpButton
 					button={{
-						buttonText: 'Sign Out',
+						buttonText: 'Sign out',
 						buttonColor: palette('google'),
 						buttonIcon: <FontAwesomeIcon icon={faGoogle} size='lg' />,
 					}}
-					onRedirect={this.onSignOut}
+					onRedirect={this.onSignOutClick}
 				/>
 			);
 		} else {
@@ -75,7 +78,7 @@ class GoogleAuth extends React.Component {
 						buttonColor: palette('google'),
 						buttonIcon: <FontAwesomeIcon icon={faGoogle} size='lg' />,
 					}}
-					onRedirect={this.onSignIn}
+					onRedirect={this.onSignInClick}
 				/>
 			);
 		}
@@ -86,4 +89,8 @@ class GoogleAuth extends React.Component {
 	}
 }
 
-export default GoogleAuth;
+const mapStateToProps = (state) => {
+	return { isSignedIn: state.auth.isSignedIn };
+};
+
+export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);
