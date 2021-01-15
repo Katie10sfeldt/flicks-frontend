@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducers from './reducers';
-
-const store = createStore(reducers);
+import { GoogleAuthStore } from './components/GoogleAuthStore';
 
 ReactDOM.render(
-	<Provider store={store}>
+	<GoogleAuthStore>
 		<Router>
 			<App />
 		</Router>
-	</Provider>,
+	</GoogleAuthStore>,
 	document.getElementById('root')
 );

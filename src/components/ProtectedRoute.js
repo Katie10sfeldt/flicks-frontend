@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import AuthContext from '../context/AuthContext';
 
-const ProtectedRoute = ({ component: Component, isSignedIn, ...rest }) => {
+export default function ProtectedRoute({ component: Component, ...rest }) {
+	const authContext = useContext(AuthContext);
+	console.log(authContext.isLoggedIn);
 	return (
 		<Route
 			{...rest}
-			render={() => (isSignedIn ? <Component /> : <Redirect to='/' />)}
+			render={() =>
+				authContext.isLoggedIn ? <Component /> : <Redirect to='/' />
+			}
 		/>
 	);
-};
-
-export default ProtectedRoute;
+}
