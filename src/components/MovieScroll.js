@@ -6,6 +6,7 @@ const listHeader = {
 	textAlign: 'left',
 	paddingTop: '20px',
 	paddingLeft: '20px',
+	textTransform: 'lowercase',
 };
 
 const scrollingWrapper = {
