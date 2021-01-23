@@ -1,16 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import AuthContext from '../context/AuthContext';
+import Cookies from 'js-cookie';
 
 export default function ProtectedRoute({ component: Component, ...rest }) {
-	const authContext = useContext(AuthContext);
-	console.log(authContext.isLoggedIn);
-	return (
-		<Route
-			{...rest}
-			render={() =>
-				authContext.isLoggedIn ? <Component /> : <Redirect to='/' />
-			}
-		/>
-	);
+  return (
+    <Route
+      {...rest}
+      render={() =>
+        Cookies.get('isSignedIn') === 'true' ? (
+          <Component />
+        ) : (
+          <Redirect to='/' />
+        )
+      }
+    />
+  );
 }
