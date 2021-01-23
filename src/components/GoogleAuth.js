@@ -1,55 +1,54 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import SignUpButton from './SignUpButton';
+import palette from '../palette';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
-class GoogleAuth extends React.Component {
-	state = { isSignedIn: null };
-	componentDidMount() {
-		window.gapi.load('client:auth2', () => {
-			window.gapi.client
-				.init({
-					clientId:
-						'468373991800-8m7kjs4or7icm4ubobkc9i2bommmerdt.apps.googleusercontent.com',
-					scope: 'email',
-				})
-				.then(() => {
-					this.auth = window.gapi.auth2.getAuthInstance();
-					this.onAuthChange();
-					this.auth.isSignedIn.listen(this.onAuthChange);
-				});
-		});
-	}
+import AuthContext from '../context/AuthContext';
 
-	onAuthChange = () => {
-		this.setState({ isSignedIn: this.auth.isSignedIn.get() });
-	};
+//Button will use AuthContext to dynamically render what is shown to the user
 
-	onSignIn = () => {
-		this.auth.signIn();
-	};
+const GoogleAuth = () => {
+  const authContext = useContext(AuthContext);
 
-	onSignOut = () => {
-		this.auth.signOut();
-	};
-
-	renderAuthButton() {
-		if (this.state.isSignedIn === null) {
-			return <div>Loading...</div>;
-		} else if (this.state.isSignedIn) {
-			return <button onClick={this.onSignOut}>Sign Out</button>;
-		} else {
-			return (
-				<button onClick={this.onSignIn}>Sign In with Google Account</button>
-			);
-		}
-	}
-
-	render() {
-		return (
-			<div>
-				{this.renderAuthButton()}
-				<button></button>
-			</div>
-		);
-	}
-}
+  if (authContext.isSignedIn === null) {
+    console.log('No sign in info');
+    return (
+      <SignUpButton
+        button={{
+          buttonText: 'Loading',
+          buttonColor: palette('google'),
+        }}
+        onRedirect={authContext.onSignInClick}
+      />
+    );
+  } else if (authContext.isSignedIn) {
+    console.log('Signed in');
+    return (
+      <SignUpButton
+        button={{
+          buttonText: 'Sign out',
+          buttonColor: palette('google'),
+          buttonIcon: <FontAwesomeIcon icon={faGoogle} size='lg' />,
+        }}
+        onRedirect={authContext.onSignOutClick}
+      />
+    );
+  } else {
+    console.log('Not signed in');
+    return (
+      <SignUpButton
+        button={{
+          buttonText: 'Google',
+          buttonColor: palette('google'),
+          buttonIcon: <FontAwesomeIcon icon={faGoogle} size='lg' />,
+        }}
+        onRedirect={authContext.onSignInClick}
+      />
+    );
+  }
+};
 
 export default GoogleAuth;
+
+//Issues: The state does not seem to be correctly updating, as well as the Auth buttons don't work after the user is signed in.
