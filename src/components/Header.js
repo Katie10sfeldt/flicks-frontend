@@ -2,7 +2,7 @@ import React from 'react';
 
 import palette from '../palette';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
@@ -77,16 +77,16 @@ const Header = () => {
 
 			<ul style={dashNav} className='dash-nav'>
 				<li style={dashNavItem}>
-					<Link style={dashNavLink} to='/Dashboard'>
-						<FontAwesomeIcon style={dashIcon} icon={faHome} size='lg' />
-						Dashboard
-					</Link>
+					{/* <Link style={dashNavLink} to='/Dashboard'> */}
+					<FontAwesomeIcon style={dashIcon} icon={faHome} size='lg' />
+					Dashboard
+					{/* </Link> */}
 				</li>
 				<li style={dashNavItem}>
-					<Link style={dashNavLink} to='/'>
-						<FontAwesomeIcon style={dashIcon} icon={faCog} size='lg' />
-						Settings
-					</Link>
+					{/* <Link style={dashNavLink} to='/'> */}
+					<FontAwesomeIcon style={dashIcon} icon={faCog} size='lg' />
+					Settings
+					{/* </Link> */}
 				</li>
 				{/* To change to dynamic rendering based off context of sign in state: */}
 				<li style={dashNavItem}>
